@@ -14,7 +14,11 @@ J = 0;
 %               You should set J to the cost.
 
 
-
+H = X * theta;
+CostMatrix = y - H;
+SquaredC = CostMatrix .* CostMatrix;
+J = sum(SquaredC) / (2 * m);
+output_precision(2);
 
 
 % =========================================================================
